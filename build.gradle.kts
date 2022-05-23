@@ -5,7 +5,6 @@ plugins {
     id("fabric-loom") version "0.12-SNAPSHOT"
     id("io.github.juuxel.loom-quiltflower") version "1.7.2"
     id("org.quiltmc.quilt-mappings-on-loom") version "3.1.2"
-
 }
 
 group = "de.dasphiller"
@@ -27,5 +26,5 @@ dependencies {
 }
 
 tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = "1.17"
+    kotlinOptions.jvmTarget = "17"
 }
