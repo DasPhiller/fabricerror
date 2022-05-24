@@ -2,9 +2,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     kotlin("jvm") version "1.6.21"
-    id("fabric-loom") version "0.12-SNAPSHOT"
-    id("io.github.juuxel.loom-quiltflower") version "1.7.2"
-    id("org.quiltmc.quilt-mappings-on-loom") version "3.1.2"
+    id("fabric-loom") version "0.11-SNAPSHOT"
 }
 
 group = "de.dasphiller"
@@ -16,13 +14,12 @@ repositories {
 
 dependencies {
     minecraft("com.mojang:minecraft:1.18.2")
-    mappings(loom.layered {
-        addLayer(quiltMappings.mappings("org.quiltmc:quilt-mappings:1.18.2+build.24:v2"))
-        officialMojangMappings()
-    })
+    mappings("net.fabricmc:yarn:1.18.2+build.3")
     modImplementation("net.fabricmc:fabric-loader:0.14.6")
-    modImplementation("net.fabricmc.fabric-api:fabric-api:0.53.3+1.18.2")
+    modImplementation("net.fabricmc.fabric-api:fabric-api:0.53.4+1.18.2")
     modImplementation("net.fabricmc:fabric-language-kotlin:1.7.4+kotlin.1.6.21")
+    modImplementation("net.axay:fabrikmc-core:1.7.4")
+
 }
 
 tasks.withType<KotlinCompile> {
