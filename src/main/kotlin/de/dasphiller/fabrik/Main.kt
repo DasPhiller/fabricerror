@@ -1,9 +1,5 @@
 package de.dasphiller.fabrik
 
-import net.fabricmc.api.ModInitializer
+fun init() {
 
-class Main : ModInitializer {
-    override fun onInitialize() {
-
-    }
 }
